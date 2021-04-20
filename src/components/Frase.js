@@ -1,25 +1,21 @@
 import React from "react";
-import { Card} from "react-bootstrap";
+import { Card } from "react-bootstrap";
 
-const Frase = () => {
+const Frase = (props) => {
   return (
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Body>
-            <div className="row">
-                <div className="col-sm-12 col-md-4">
-                    <img src="" alt=""></img>
-                </div> 
-                <div className="col-sm-12 col-md-8">
-
-          <Card.Title>Personaje</Card.Title>
-          <Card.Text>
-            Frase Aleatorio
-          </Card.Text>
-                </div>
-            </div>
-        </Card.Body>
-      </Card>
+    <Card>
+      <Card.Body>
+        <div className="row align-items-center">
+          <div className="col-sm-12 col-md-4">
+            <img src={props.personaje.image}alt={props.personaje.character} style={{height:300}}></img>
+          </div>
+          <div className="col-sm-12 col-md-8">
+            <Card.Title>{props.personaje.character}</Card.Title>
+            <Card.Text>{props.personaje.quote}</Card.Text>
+          </div>
+        </div>
+      </Card.Body>
+    </Card>
   );
 };
 
