@@ -25,7 +25,7 @@ function App() {
     console.log(resultado[0]);
     setPersonaje(resultado[0]); //como aqui actualizo el estado se vuelve a ejecutar useeffect
     setTimeout(
-      function(){setCargando(false)}, 500)
+      function(){setCargando(false)}, 1000)
   };
 
   //operador ternario (condicion) ? iftrue : iffalse
@@ -48,7 +48,7 @@ function App() {
           className="my-5"
           onClick={() => consultarAPI()}
         >
-          Obtener frase
+          Get quote
         </Button>
         {mostrarComponente}
       </article>
